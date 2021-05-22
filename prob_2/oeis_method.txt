@@ -1,0 +1,6 @@
+go to oeis.org, search up the sequence 1, 2, 3, 5, 8, 13, 21, 34, 55, 89: 
+https://oeis.org/search?q=1%2C+2%2C+3%2C+5%2C+8%2C+13%2C+21%2C+34%2C+55%2C+89&sort=&language=english&go=Search
+
+get: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578
+
+use python to find the evens and sum them 
