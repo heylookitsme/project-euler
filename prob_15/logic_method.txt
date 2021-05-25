@@ -1,0 +1,9 @@
+notice that this is a classic troll problem that discrete math courses love to give students. since we begin only from the top left corner and want to achieve reaching the bottom, and are only able to do either down or right on this grid, we can see, effectively, that no matter how *many* paths we take, they all characteristically resemble one another, and so we might think of them in a combinations/permutations kind of way.
+
+no matter the size of the grid, the actual path taken, given an N x N grid, we will *have* to traverse the grid to the right N times, and down N times. that is the only way, given our constraints, that we will reach the bottom right corner (you cant go backwards! you cant go back up! you *must* arrive at the bottom right corner!). that being said, given such an N x N grid, we can how think of the problem like this: I need to go (R)ight N times, and I need to go (D)own N times to satisfy the problem. to count how many ways I can do this along the grid, I will have to find out how many distinct arrangments of R-D sequences (of length N + N) I can form. 
+
+We can think of making these arragements like this: you have N + N "free spaces" where you can depose of an R in each "free space". note that the order in which you *place* the R's doesnt matter, but the placement of the R's on the free spaces *does* matter. this is exactly what the combination function (n C r) specifies.
+
+for our particular problem, then our n = 20 + 20 free spaces, and r = 20 R-steps (or, D-steps for that matter). 
+
+put into python comb(40, 20) = 137846528820
