@@ -1,0 +1,15 @@
+there is an explicit formula for the sum of squares and it goes a little something like: 
+
+\sum_{i = 1}^n i^2 = \cfrac{n(n + 1)(2n + 1)}{6}
+
+and the gaussian sum goes a little something like: 
+
+\sum_{i = 1}^n i = \cfrac{n(n+1)}{2}
+
+(latex notation,,, just,,, just *envision* it: https://latex2image.joeraut.com/). not going to derive this one chief but there do exist derivations out there :') 
+
+that being said: 
+[(100)(101)/2]^2 - [(100)(101)(201)/6] = 25502500 - 338350 = 25164150
+
+you can also do this with wolfram alpha, it computes sums for you 
+

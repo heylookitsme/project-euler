@@ -1,0 +1,26 @@
+(heavily inspired by bitRAKE's answer). i illustrate a thought process. 
+
+we might first think, at least, the minimal "dumb" number we can make that has the numbers in the range 1 - 20 as a divisor would be 1 * 2 * 3 * ... * 20 = 20!. this number comes to like 2.4 x 10something^18 which is ***huge*** and also not the answer. however, we might think this is like an "upper bound" to our answer: if we divided 20! by 2, for instance, that would "take out" one of the extra 2's we know are in the factorization of that number that result from, say, 4 = 2*2. so mayhaps we can think of some kind of factorization to generate the minimal number based upon the prime factorization
+
+so now we are keeping in mind that in the range of numbers from 1-20, there are numbers that can be expressed as multiples of one another, i.e 20 = 2 * 5 * 2. it is also now, then, a good time to recall a certain special theorem called the "unique prime factorization theorem" that states that any number can be uniquely expressed as a factorization of primes. meaning, we can *definitley* find a ***unique*** way to express our special numbers in terms of primes in the range of 1-20 (those primes being 2, 3, ... 19). 
+
+okay. so how can we do that in the MINIMAL way? well, we can think of it like this: in the prime factorizations of numbers in the range 1-20, we know that these numbers might be comprised of a certain number of one prime. i.e 16 = 2 * 2 * 2 * 2; 2^4 is the unique prime factorization of 16, so there have to AT LEAST be 4 twos in the prime factorization of a number that is divisible by all numbers in the range of 1-20. moreover, if none of the numbers between 1-20 have as many 2's in its prime factorization as 16 does, then we know that there are ONLY 4 2's in this numbers prime factorization. why? because why would any of the other divisors need any more 2's in there? if those divisors have less 2's or no twos, then that means dividing by this divisor cant "milk" any 2's out of the myster number. 
+
+okay, so repeating this process for all composite numbers in the range 1 - 20: 
+4 = 2 * 2
+6 = 2 * 3
+8 = 2 * 2 * 2
+9 = 3 * 3
+10 = 2 * 5
+12 = 3 * 2 * 2
+14 = 7 * 2
+15 = 5 * 3
+16 = 2 * 2 * 2 * 2
+18 = 2 * 3 * 3
+20 = 2 * 5 * 2
+
+we see there are only two "repeating" primes in a given prime factorization: 2, and 3. the maximal amount of times 2 appears in a single factorization is 4 (in the composite 16); and the maximal amount of times 3 appears in a single factorization is 2 (in the composite number 9). thus, we can infer that the MINIMAL number that will be divisble by all of these composite numbers and prime numbers will have the unique prime factorization: 
+
+(2^4) * (3^2) * 5 * 7 * 11 * 13 * 17 * 19 = 232,792,560
+
+(the primes have to be included because they cannot be factored by previous primes) now, we see that we can "take out" every prime number and composite number from the range 1 - 20 of this guy(no more), and we are done. 
