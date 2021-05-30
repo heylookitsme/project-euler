@@ -1,0 +1,22 @@
+per this: http://www.moomoomath.com/Pythagorean-Triples.html
+(i am afraid i am not feeling up to deriving the forumla for pythagorean triples today) 
+
+our formula to construct pythagorean triples is to select any integers n, m such that n > m. then (2mn, n^2 - m^2, n^2 + m^2) makes a pythagorean triple. 
+
+we might set a = 2mn, b = n^2 - m^2, c = n^2 + m^2. we know we want a + b + c = 1000. thus, a + b + c = 2mn + n^2 - m^2 + n^2 + m^2 = 2mn + 2n^2 = 1000. solving for the inequality yields n(n + m) = 500. 
+
+now, to find the n and m to satisfy n(n + m) = 500, we look to the factors of 500. these are easily found im not gonna lie, but you can also use woofy alphram: https://www.wolframalpha.com/input/?i=factors+of+500 to find them. we get each "pair" of factors to look like this (each pair is on its own line, delimited by a comma): 
+1, 500
+2, 250
+4, 125
+5, 100
+10, 50
+20, 25
+
+we know that n + m > n because we are not stupid, and we know that n > m. meaning, the left hand numbers are equal to n, and the right hand numbers are going to be equal to n + m. going from the bottom of the list, we can see the way to fashion this to fit n(n + m) = 500 would be like: 
+     - for n=20, n + m=25; n(n + m) = 20(20 + 5) = 500
+     - for n=10, n + m=50; n(n + m) = 10(10 + 50) = 500
+     - ....
+and so on. however, we can see instantly the second-to-last set of factors is not going to work--50 > 10 --> m > n. we are also given the hint from the problem that there is only one such pythagorean triple that satisfies a + b + c = 100, so we infer that n = 20, m = 5 are our only set of n and m to do our job. 
+
+now, we plug back into the original formulas and get (a = 2mn = 2(5)(20) = 200, b = n^2 - m^2 = 20^2 - 5^2 = 375, c = n^2 + m^2 = 20^2 + 5^2 = 425). our pythagorian triple is (200, 375, 425). their product is 200 * 375 * 425 = 31875000

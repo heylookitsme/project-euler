@@ -6,3 +6,4 @@ to revisit:
 - prob_3: rewrite prime sieves, time 
 - prob 7: actually implement prime sieve
 - prob 8: time/memory analysis of using strings vs. using integers
+- prob 9: brute force script could be cool complement
