@@ -1,0 +1,3 @@
+go to wolfram alpha, type in "sum of primes less than two million": https://www.wolframalpha.com/input/?i=sum+of+primes+less+than+two+million
+
+result of query is: 142913828922
